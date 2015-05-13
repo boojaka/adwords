@@ -1,0 +1,44 @@
+doctype xml
+SOAP-ENV:Envelope(xmlns:tns="https://adwords.google.com/api/adwords/o/v201502",xmlns:ns0="https://adwords.google.com/api/adwords/o/v201502",xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/",xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502",xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance",xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/")
+ SOAP-ENV:Header
+  tns:RequestHeader
+   tns:clientCustomerId(xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502")=costumerId || "COSTUMER_ID"
+   tns:developerToken(xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502")=developerToken || "DEVELOPER_TOKEN"
+   tns:userAgent(xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502")=userAgent || "USER_AGENT"
+   tns:validateOnly(xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502")=validateOnly ? 'true' : 'false'
+   tns:partialFailure(xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502")=partialFailure ? 'true' : 'false'
+ ns1:Body
+  ns0:get
+   ns0:selector
+    - var sq = searchQueries || []
+    - if(sq.length)
+     ns0:searchParameters(xsi:type="ns0:RelatedToQuerySearchParameter")
+      ns0:SearchParameter.Type="RelatedToQuerySearchParameter"
+      - for(var q = 0; q < sq.length; q++)
+       ns0:queries=sq[q]
+    - var _languages = languages || []
+    - if (_languages.length)
+     ns0:searchParameters(xsi:type="ns0:LanguageSearchParameter")
+      ns0:SearchParameter.Type="LanguageSearchParameter"
+      - for(var _l = 0; _l < _languages.length; _l++)
+       ns0:languages: ns2:id=_languages[_l]
+    - var _competitions = competitions || []
+    - if (_competitions.length)
+     ns0:searchParameters(xsi:type="ns0:CompetitionSearchParameter")
+      ns0:SearchParameter.Type="CompetitionSearchParameter"
+      - for(var _c = 0; _c < _competitions.length; _c++)
+       ns0:levels=_competitions[_c]
+    - var _locations = locations || []
+    - if (_locations.length)
+     ns0:searchParameters(xsi:type="ns0:LocationSearchParameter")
+      ns0:SearchParameter.Type="LocationSearchParameter"
+      - for(var _l = 0; _l < _locations.length; _l++)
+       ns0:locations: ns2:id=_locations[_l]
+    ns0:ideaType=ideaType || 'KEYWORD'
+    ns0:requestType=requestType || 'IDEAS'
+    - var reqAttrTypes = requestedAttributeTypes || []
+    - for(var attrType = 0; attrType < reqAttrTypes.length; attrType++)
+     ns0:requestedAttributeTypes=reqAttrTypes[attrType]
+    ns0:paging
+     ns2:startIndex=startIndex | 0
+     ns2:numberResults=(numberResults | 0) || 100

@@ -1,0 +1,566 @@
+<!--- Request 1 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="https://adwords.google.com/api/adwords/mcm/v201502" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="https://adwords.google.com/api/adwords/mcm/v201502" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<tns:RequestHeader>
+			<tns:clientCustomerId xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">869-227-2751</tns:clientCustomerId>
+			<tns:developerToken xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">uIbr_0yYmS4qelpS2QEMEg</tns:developerToken>
+			<tns:userAgent xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">My Adwords API Project (AwApi-Python, googleads/3.3.0, Python/2.7)</tns:userAgent>
+			<tns:validateOnly xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:validateOnly>
+			<tns:partialFailure xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:partialFailure>
+		</tns:RequestHeader>
+	</SOAP-ENV:Header>
+	<ns1:Body>
+		<ns0:get/>
+	</ns1:Body>
+</SOAP-ENV:Envelope>
+
+
+<!-- Response 1 -->
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns="https://adwords.google.com/api/adwords/mcm/v201502">
+			<ns2:requestId>000515a83a9645690adb3361d8002371</ns2:requestId>
+			<ns2:serviceName>CustomerService</ns2:serviceName>
+			<ns2:methodName>get</ns2:methodName>
+			<ns2:operations>0</ns2:operations>
+			<ns2:responseTime>228</ns2:responseTime>
+		</ResponseHeader>
+	</soap:Header>
+	<soap:Body>
+		<getResponse xmlns="https://adwords.google.com/api/adwords/mcm/v201502" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502">
+			<rval>
+				<customerId>8692272751</customerId>
+				<currencyCode>USD</currencyCode>
+				<dateTimeZone>Europe/London</dateTimeZone>
+				<descriptiveName>test</descriptiveName>
+				<companyName></companyName>
+				<canManageClients>false</canManageClients>
+				<testAccount>true</testAccount>
+				<autoTaggingEnabled>false</autoTaggingEnabled>
+				<conversionTrackingSettings>
+					<conversionOptimizerMode>MANY_PER_CLICK</conversionOptimizerMode>
+					<effectiveConversionTrackingId>0</effectiveConversionTrackingId>
+					<usesCrossAccountConversionTracking>false</usesCrossAccountConversionTracking>
+				</conversionTrackingSettings>
+				<remarketingSettings>
+					<snippet>
+						&lt;!-- Google Code for Remarketing Tag --&gt;
+						&lt;!--------------------------------------------------
+						Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+						---------------------------------------------------&gt;
+						&lt;script type=&quot;text/javascript&quot;&gt;
+							/* &lt;![CDATA[ */
+							var google_conversion_id = 950066853;
+							var google_custom_params = window.google_tag_params;
+							var google_remarketing_only = true;
+							/* ]]&gt; */
+						&lt;/script&gt;
+						&lt;script type=&quot;text/javascript&quot; src=&quot;//www.googleadservices.com/pagead/conversion.js&quot;&gt;
+						&lt;/script&gt;
+						&lt;noscript&gt;
+							&lt;div style=&quot;display:inline;&quot;&gt;
+								&lt;img height=&quot;1&quot; width=&quot;1&quot; style=&quot;border-style:none;&quot; alt=&quot;&quot; src=&quot;//googleads.g.doubleclick.net/pagead/viewthroughconversion/950066853/?value=0&amp;amp;guid=ON&amp;amp;script=0&quot;/&gt;
+							&lt;/div&gt;
+						&lt;/noscript&gt;
+					</snippet>
+				</remarketingSettings>
+			</rval>
+		</getResponse>
+	</soap:Body>
+</soap:Envelope>
+
+<!-- Request 2 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201502" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<tns:RequestHeader>
+			<tns:clientCustomerId>869-227-2751</tns:clientCustomerId>
+			<tns:developerToken>uIbr_0yYmS4qelpS2QEMEg</tns:developerToken>
+			<tns:userAgent>My Adwords API Project (AwApi-Python, googleads/3.3.0, Python/2.7)</tns:userAgent>
+			<tns:validateOnly>false</tns:validateOnly>
+			<tns:partialFailure>false</tns:partialFailure>
+		</tns:RequestHeader>
+	</SOAP-ENV:Header>
+	<ns0:Body>
+		<ns1:mutate>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand>
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:Location">
+						<ns1:id>21137</ns1:id>
+						<ns1:Criterion.Type>Location</ns1:Criterion.Type>
+					</ns1:criterion>
+				</ns1:operand>
+			</ns1:operations>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand>
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:Location">
+						<ns1:id>2484</ns1:id>
+						<ns1:Criterion.Type>Location</ns1:Criterion.Type>
+					</ns1:criterion>
+				</ns1:operand>
+			</ns1:operations>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand>
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:Language">
+						<ns1:id>1000</ns1:id>
+						<ns1:Criterion.Type>Language</ns1:Criterion.Type>
+					</ns1:criterion>
+				</ns1:operand>
+				</ns1:operations>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand>
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:Language">
+						<ns1:id>1003</ns1:id>
+						<ns1:Criterion.Type>Language</ns1:Criterion.Type>
+					</ns1:criterion>
+				</ns1:operand>
+			</ns1:operations>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand>
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:LocationGroups">
+						<ns1:Criterion.Type>LocationGroups</ns1:Criterion.Type>
+						<ns1:matchingFunction>
+							<ns1:operator>AND</ns1:operator>
+							<ns1:lhsOperand xsi:type="ns1:IncomeOperand">
+								<ns1:FunctionArgumentOperand.Type>IncomeOperand</ns1:FunctionArgumentOperand.Type>
+								<ns1:tier>TIER_3</ns1:tier>
+							</ns1:lhsOperand>
+							<ns1:rhsOperand xsi:type="ns1:GeoTargetOperand">
+								<ns1:FunctionArgumentOperand.Type>GeoTargetOperand</ns1:FunctionArgumentOperand.Type>
+								<ns1:locations>1015116</ns1:locations>
+							</ns1:rhsOperand>
+						</ns1:matchingFunction>
+					</ns1:criterion>
+				</ns1:operand>
+			</ns1:operations>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand>
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:LocationGroups">
+						<ns1:Criterion.Type>LocationGroups</ns1:Criterion.Type>
+						<ns1:matchingFunction>
+							<ns1:operator>AND</ns1:operator>
+							<ns1:lhsOperand xsi:type="ns1:PlacesOfInterestOperand">
+								<ns1:FunctionArgumentOperand.Type>PlacesOfInterestOperand</ns1:FunctionArgumentOperand.Type>
+								<ns1:category>DOWNTOWN</ns1:category>
+							</ns1:lhsOperand>
+							<ns1:rhsOperand xsi:type="ns1:GeoTargetOperand">
+								<ns1:FunctionArgumentOperand.Type>GeoTargetOperand</ns1:FunctionArgumentOperand.Type>
+								<ns1:locations>1015116</ns1:locations>
+							</ns1:rhsOperand>
+						</ns1:matchingFunction>
+					</ns1:criterion>
+				</ns1:operand>
+			</ns1:operations>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand>
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:LocationGroups">
+						<ns1:Criterion.Type>LocationGroups</ns1:Criterion.Type>
+						<ns1:matchingFunction>
+							<ns1:operator>IDENTITY</ns1:operator>
+							<ns1:lhsOperand xsi:type="ns1:LocationExtensionOperand">
+								<ns1:FunctionArgumentOperand.Type>LocationExtensionOperand</ns1:FunctionArgumentOperand.Type>
+								<ns1:radius>
+									<ns1:FunctionArgumentOperand.Type>ConstantOperand</ns1:FunctionArgumentOperand.Type>
+									<ns1:type>DOUBLE</ns1:type>
+									<ns1:unit>MILES</ns1:unit>
+									<ns1:doubleValue>10</ns1:doubleValue>
+								</ns1:radius>
+							</ns1:lhsOperand>
+						</ns1:matchingFunction>
+					</ns1:criterion>
+				</ns1:operand>
+			</ns1:operations>
+			<ns1:operations>
+				<ns1:operator>ADD</ns1:operator>
+				<ns1:operand xsi:type="ns1:NegativeCampaignCriterion">
+					<ns1:campaignId>TestCompaign</ns1:campaignId>
+					<ns1:criterion xsi:type="ns1:Keyword">
+						<ns1:Criterion.Type>Keyword</ns1:Criterion.Type>
+						<ns1:text>jupiter cruise</ns1:text>
+						<ns1:matchType>BROAD</ns1:matchType>
+					</ns1:criterion>
+					<ns1:CampaignCriterion.Type>NegativeCampaignCriterion</ns1:CampaignCriterion.Type>
+				</ns1:operand>
+			</ns1:operations>
+		</ns1:mutate>
+	</ns0:Body>
+</SOAP-ENV:Envelope>
+
+<!-- This is it! request --->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:tns="https://adwords.google.com/api/adwords/o/v201502" xmlns:ns0="https://adwords.google.com/api/adwords/o/v201502" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<tns:RequestHeader>
+			<tns:clientCustomerId xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">869-227-2751</tns:clientCustomerId>
+			<tns:developerToken xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">uIbr_0yYmS4qelpS2QEMEg</tns:developerToken>
+			<tns:userAgent xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">My Adwords API Project (AwApi-Python, googleads/3.3.0, Python/2.7)</tns:userAgent>
+			<tns:validateOnly xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:validateOnly>
+			<tns:partialFailure xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:partialFailure>
+		</tns:RequestHeader>
+	</SOAP-ENV:Header>
+	<ns1:Body>
+		<ns0:get>
+			<ns0:selector>
+				<ns0:searchParameters xsi:type="ns0:RelatedToQuerySearchParameter">
+					<ns0:SearchParameter.Type>RelatedToQuerySearchParameter</ns0:SearchParameter.Type>
+					<ns0:queries>buy flowers</ns0:queries>
+				</ns0:searchParameters>
+				<ns0:searchParameters xsi:type="ns0:LanguageSearchParameter">
+					<ns0:SearchParameter.Type>LanguageSearchParameter</ns0:SearchParameter.Type>
+					<ns0:languages>
+						<ns2:id>1000</ns2:id>
+					</ns0:languages>
+				</ns0:searchParameters>
+				<ns0:ideaType>KEYWORD</ns0:ideaType>
+				<ns0:requestType>IDEAS</ns0:requestType>
+				<ns0:requestedAttributeTypes>KEYWORD_TEXT</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>SEARCH_VOLUME</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>CATEGORY_PRODUCTS_AND_SERVICES</ns0:requestedAttributeTypes>
+				<ns0:paging>
+					<ns2:startIndex>700</ns2:startIndex>
+					<ns2:numberResults>100</ns2:numberResults>
+				</ns0:paging>
+			</ns0:selector>
+		</ns0:get>
+	</ns1:Body>
+</SOAP-ENV:Envelope>
+
+<!-- This is it! Response -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns="https://adwords.google.com/api/adwords/o/v201502">
+			<ns2:requestId>000515a9131166480ae66e8a7700260a</ns2:requestId>
+			<ns2:serviceName>ExperimentDiversionService</ns2:serviceName>
+			<ns2:methodName>get</ns2:methodName>
+			<ns2:operations>0</ns2:operations>
+			<ns2:responseTime>245</ns2:responseTime>
+		</ResponseHeader>
+	</soap:Header>
+	<soap:Body>
+		<getResponse xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns="https://adwords.google.com/api/adwords/o/v201502">
+			<rval>
+				<totalNumEntries>800</totalNumEntries>
+				<entries>
+					<data>
+						<key>KEYWORD_TEXT</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="StringAttribute">
+							<Attribute.Type>StringAttribute</Attribute.Type>
+							<value>buy flowers 56d05ce</value>
+						</value>
+					</data>
+					<data>
+						<key>CATEGORY_PRODUCTS_AND_SERVICES</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IntegerSetAttribute">
+							<Attribute.Type>IntegerSetAttribute</Attribute.Type>
+							<value>52</value>
+							<value>21</value>
+							<value>35</value>
+						</value>
+					</data>
+					<data>
+						<key>SEARCH_VOLUME</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LongAttribute">
+							<Attribute.Type>LongAttribute</Attribute.Type>
+							<value>-720840025328795737</value>
+						</value>
+					</data>
+				</entries>
+				<entries>
+					<data>
+						<key>KEYWORD_TEXT</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="StringAttribute">
+							<Attribute.Type>StringAttribute</Attribute.Type>
+							<value>red herring 7720e887</value>
+						</value>
+					</data>
+					<data>
+						<key>CATEGORY_PRODUCTS_AND_SERVICES</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IntegerSetAttribute">
+							<Attribute.Type>IntegerSetAttribute</Attribute.Type>
+							<value>4</value>
+							<value>20</value>
+							<value>9</value>
+						</value>
+					</data>
+					<data>
+						<key>SEARCH_VOLUME</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LongAttribute">
+							<Attribute.Type>LongAttribute</Attribute.Type>
+							<value>563039077618984352</value>
+						</value>
+					</data>
+				</entries>
+				<entries>
+					<data>
+						<key>KEYWORD_TEXT</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="StringAttribute">
+							<Attribute.Type>StringAttribute</Attribute.Type>
+							<value>red herring 1b4bb445</value>
+						</value>
+					</data>
+					<data>
+						<key>CATEGORY_PRODUCTS_AND_SERVICES</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IntegerSetAttribute">
+							<Attribute.Type>IntegerSetAttribute</Attribute.Type>
+							<value>32</value>
+							<value>44</value>
+							<value>31</value>
+						</value>
+					</data>
+					<data>
+						<key>SEARCH_VOLUME</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LongAttribute">
+							<Attribute.Type>LongAttribute</Attribute.Type>
+							<value>-703281259900227266</value>
+						</value>
+					</data>
+				</entries>
+				<entries>
+					<data>
+						<key>KEYWORD_TEXT</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="StringAttribute">
+							<Attribute.Type>StringAttribute</Attribute.Type>
+							<value>red herring e1b7cc69</value>
+						</value>
+					</data>
+					<data>
+						<key>CATEGORY_PRODUCTS_AND_SERVICES</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IntegerSetAttribute">
+							<Attribute.Type>IntegerSetAttribute</Attribute.Type>
+							<value>44</value>
+							<value>60</value>
+							<value>74</value>
+						</value>
+					</data>
+					<data>
+						<key>SEARCH_VOLUME</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LongAttribute">
+							<Attribute.Type>LongAttribute</Attribute.Type>
+							<value>-39516503359001771</value>
+						</value>
+					</data>
+				</entries>
+				<entries>
+					<data>
+						<key>KEYWORD_TEXT</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="StringAttribute">
+							<Attribute.Type>StringAttribute</Attribute.Type>
+							<value>buy flowers 666d3f19</value>
+						</value>
+					</data>
+					<data>
+						<key>CATEGORY_PRODUCTS_AND_SERVICES</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IntegerSetAttribute">
+							<Attribute.Type>IntegerSetAttribute</Attribute.Type>
+							<value>13</value>
+							<value>3</value>
+							<value>31</value>
+						</value>
+					</data>
+					<data>
+						<key>SEARCH_VOLUME</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LongAttribute">
+							<Attribute.Type>LongAttribute</Attribute.Type>
+							<value>-751874844982235375</value>
+						</value>
+					</data>
+				</entries>
+			</rval>
+		</getResponse>
+	</soap:Body>
+</soap:Envelope>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:tns="https://adwords.google.com/api/adwords/o/v201502" xmlns:ns0="https://adwords.google.com/api/adwords/o/v201502" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<tns:RequestHeader>
+			<tns:clientCustomerId xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">869-227-2751</tns:clientCustomerId>
+			<tns:developerToken xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">uIbr_0yYmS4qelpS2QEMEg</tns:developerToken>
+			<tns:userAgent xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">My Adwords API Project (AwApi-Python, googleads/3.3.0, Python/2.7)</tns:userAgent>
+			<tns:validateOnly xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:validateOnly>
+			<tns:partialFailure xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:partialFailure>
+		</tns:RequestHeader>
+	</SOAP-ENV:Header>
+	<ns1:Body>
+		<ns0:get>
+			<ns0:selector>
+				<ns0:searchParameters xsi:type="ns0:RelatedToQuerySearchParameter">
+					<ns0:SearchParameter.Type>RelatedToQuerySearchParameter</ns0:SearchParameter.Type>
+					<ns0:queries>buy flowers</ns0:queries>
+					<ns0:queries>big flowers</ns0:queries>
+				</ns0:searchParameters>
+				<ns0:searchParameters xsi:type="ns0:LanguageSearchParameter">
+					<ns0:SearchParameter.Type>LanguageSearchParameter</ns0:SearchParameter.Type>
+					<ns0:languages>
+						<ns2:id>1000</ns2:id>
+					</ns0:languages>
+				</ns0:searchParameters>
+				<ns0:searchParameters xsi:type="ns0:CompetitionSearchParameter">
+					<ns0:SearchParameter.Type>CompetitionSearchParameter</ns0:SearchParameter.Type>
+					<ns0:levels>HIGH</ns0:levels>
+				</ns0:searchParameters>
+				<ns0:searchParameters xsi:type="ns0:LocationSearchParameter">
+					<ns0:SearchParameter.Type>LocationSearchParameter</ns0:SearchParameter.Type>
+					<ns0:locations>
+						<ns2:id>1012852</ns2:id>
+					</ns0:locations>
+				</ns0:searchParameters>
+				<ns0:ideaType>KEYWORD</ns0:ideaType>
+				<ns0:requestType>IDEAS</ns0:requestType>
+				<ns0:requestedAttributeTypes>KEYWORD_TEXT</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>SEARCH_VOLUME</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>CATEGORY_PRODUCTS_AND_SERVICES</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>AVERAGE_CPC</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>TARGETED_MONTHLY_SEARCHES</ns0:requestedAttributeTypes>
+				<ns0:paging>
+					<ns2:startIndex>0</ns2:startIndex>
+					<ns2:numberResults>1</ns2:numberResults>
+				</ns0:paging>
+			</ns0:selector>
+		</ns0:get>
+	</ns1:Body>
+</SOAP-ENV:Envelope>
+
+
+<!-- another response -->
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<ResponseHeader xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns="https://adwords.google.com/api/adwords/o/v201502">
+			<ns2:requestId>000515a94d9af3100ae62001970005be</ns2:requestId>
+			<ns2:serviceName>AccountService</ns2:serviceName>
+			<ns2:methodName>get</ns2:methodName>
+			<ns2:operations>0</ns2:operations>
+			<ns2:responseTime>326</ns2:responseTime>
+		</ResponseHeader>
+	</soap:Header>
+	<soap:Body>
+		<getResponse xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns="https://adwords.google.com/api/adwords/o/v201502">
+			<rval>
+				<totalNumEntries>800</totalNumEntries>
+				<entries>
+					<data>
+						<key>KEYWORD_TEXT</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="StringAttribute">
+							<Attribute.Type>StringAttribute</Attribute.Type>
+							<value>buy flowers 22aaa1d5</value>
+						</value>
+					</data>
+					<data>
+						<key>CATEGORY_PRODUCTS_AND_SERVICES</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IntegerSetAttribute">
+							<Attribute.Type>IntegerSetAttribute</Attribute.Type>
+							<value>50</value>
+							<value>70</value>
+							<value>35</value>
+						</value>
+					</data>
+					<data>
+						<key>TARGETED_MONTHLY_SEARCHES</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MonthlySearchVolumeAttribute">
+							<Attribute.Type>MonthlySearchVolumeAttribute</Attribute.Type>
+							<value>
+								<year>2015</year>
+								<month>4</month>
+								<count>-6617901527301814961</count>
+							</value>
+							<value>
+								<year>2015</year>
+								<month>3</month>
+								<count>-5945360099698863612</count>
+							</value>
+							<value>
+								<year>2015</year>
+								<month>2</month>
+								<count>884785552933218968</count>
+							</value>
+							<value>
+								<year>2015</year>
+								<month>1</month>
+								<count>-5932198184041874616</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>12</month>
+								<count>-7374124447333367784</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>11</month>
+								<count>7558103068231725965</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>10</month>
+								<count>-8441621854706483542</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>9</month>
+								<count>-6253293373933149132</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>8</month>
+								<count>-4961473238114524555</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>7</month>
+								<count>5907623719857165812</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>6</month>
+								<count>6353595186741089493</count>
+							</value>
+							<value>
+								<year>2014</year>
+								<month>5</month>
+								<count>-7235046476645394969</count>
+							</value>
+						</value>
+					</data>
+					<data>
+						<key>AVERAGE_CPC</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MoneyAttribute">
+							<Attribute.Type>MoneyAttribute</Attribute.Type>
+							<value>
+								<ns2:ComparableValue.Type>Money</ns2:ComparableValue.Type>
+								<ns2:microAmount>7481616337991410688</ns2:microAmount>
+							</value>
+						</value>
+					</data>
+					<data>
+						<key>SEARCH_VOLUME</key>
+						<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="LongAttribute">
+							<Attribute.Type>LongAttribute</Attribute.Type>
+							<value>403048039450569191</value>
+						</value>
+					</data>
+				</entries>
+			</rval>
+		</getResponse>
+	</soap:Body>
+</soap:Envelope>
+

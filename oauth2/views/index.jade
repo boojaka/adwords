@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Adwords token
+    p=g_api_key.access_token
+    p #{img}
+    script
+     !="var g_api_key = " + JSON.stringify(g_api_key) + ";"
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:tns="https://adwords.google.com/api/adwords/o/v201502" xmlns:ns0="https://adwords.google.com/api/adwords/o/v201502" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<tns:RequestHeader>
+			<tns:clientCustomerId xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">${CUSTOMER_ID}</tns:clientCustomerId>
+			<tns:developerToken xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">${DEVELOPER_TOKEN}</tns:developerToken>
+			<tns:userAgent xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">${APPLICATION_NAME}</tns:userAgent>
+			<tns:validateOnly xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:validateOnly>
+			<tns:partialFailure xmlns:tns="https://adwords.google.com/api/adwords/cm/v201502">false</tns:partialFailure>
+		</tns:RequestHeader>
+	</SOAP-ENV:Header>
+	<ns1:Body>
+		<ns0:get>
+			<ns0:selector>
+				<ns0:searchParameters xsi:type="ns0:RelatedToQuerySearchParameter">
+					<ns0:SearchParameter.Type>RelatedToQuerySearchParameter</ns0:SearchParameter.Type>
+					<ns0:queries>buy flowers</ns0:queries>
+				</ns0:searchParameters>
+				<ns0:searchParameters xsi:type="ns0:LanguageSearchParameter">
+					<ns0:SearchParameter.Type>LanguageSearchParameter</ns0:SearchParameter.Type>
+					<ns0:languages>
+						<ns2:id>1000</ns2:id>
+					</ns0:languages>
+				</ns0:searchParameters>
+				<ns0:ideaType>KEYWORD</ns0:ideaType>
+				<ns0:requestType>IDEAS</ns0:requestType>
+				<ns0:requestedAttributeTypes>KEYWORD_TEXT</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>SEARCH_VOLUME</ns0:requestedAttributeTypes>
+				<ns0:requestedAttributeTypes>CATEGORY_PRODUCTS_AND_SERVICES</ns0:requestedAttributeTypes>
+				<ns0:paging>
+					<ns2:startIndex>0</ns2:startIndex>
+					<ns2:numberResults>1</ns2:numberResults>
+				</ns0:paging>
+			</ns0:selector>
+		</ns0:get>
+	</ns1:Body>
+</SOAP-ENV:Envelope>

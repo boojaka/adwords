@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Header>
+    <ns1:RequestHeader soapenv:actor="http://schemas.xmlsoap.org/soap/actor/next" soapenv:mustUnderstand="0" xmlns:ns1="https://adwords.google.com/api/adwords/cm/v201502">
+      <ns1:clientCustomerId>888-140-9069</ns1:clientCustomerId>
+      <ns1:developerToken>_mAlpFYdOqtsgYWBgfcLfQ</ns1:developerToken>
+      <ns1:userAgent>My Adwords API Project</ns1:userAgent>
+      <ns1:validateOnly>false</ns1:validateOnly>
+      <ns1:partialFailure>false</ns1:partialFailure>
+    </ns1:RequestHeader>
+  </soapenv:Header>
+  <soapenv:Body>
+    <mutate xmlns="https://adwords.google.com/api/adwords/cm/v201502">
+      <operations>
+        <operator>ADD</operator>
+        <operand>
+          <name>Hello World</name>
+          <status>PAUSED</status>
+          <budget>
+            <budgetId>987654321</budgetId>
+          </budget>
+          <settings xsi:type="ns2:GeoTargetTypeSetting" xmlns:ns2="https://adwords.google.com/api/adwords/cm/v201502">
+            <positiveGeoTargetType>DONT_CARE</positiveGeoTargetType>
+          </settings>
+          <settings xsi:type="ns3:KeywordMatchSetting" xmlns:ns3="https://adwords.google.com/api/adwords/cm/v201502">
+            <optIn>false</optIn>
+          </settings>
+          <networkSetting>
+            <targetGoogleSearch>true</targetGoogleSearch>
+            <targetSearchNetwork>true</targetSearchNetwork>
+            <targetContentNetwork>false</targetContentNetwork>
+          </networkSetting>
+          <biddingStrategyConfiguration>
+            <biddingScheme xsi:type="ns4:ManualCpcBiddingScheme" xmlns:ns4="https://adwords.google.com/api/adwords/cm/v201502">
+              <enhancedCpcEnabled>false</enhancedCpcEnabled>
+            </biddingScheme>
+          </biddingStrategyConfiguration>
+        </operand>
+      </operations>
+    </mutate>
+  </soapenv:Body>
+</soapenv:Envelope> 

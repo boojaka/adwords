@@ -1,0 +1,8 @@
+{
+  "name": "adwords-server-side",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": ">=4.12.3",
+    "soap": ">=0.8.0"
+  }
+}
